@@ -10,3 +10,4 @@ python3 train.py --batch 16 --epochs 55 --data ../data/data.yaml --weights 'yolo
 ```
 ## Trained weights:
 - **Green Coffee:** https://public-scicrop.s3.amazonaws.com/academy/coffee-best.pt
+- **Coffee Fruit:** https://public-scicrop.s3.amazonaws.com/academy/coffee_fruit_best.pt
