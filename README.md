@@ -41,8 +41,8 @@ If you trained the model by yourself using the provided datasets you need to fin
 ### Running the detection
 Execute the app.py script from root of this repository, with the following parameters:
 1. **detect**: Set detection mode
-2. **<weights>**: Change by the *.pt weight file that you want to use
-3. **<source>**: Change by the image source (for detection) you want to use: a) An image file (jpg, png, etc); B) A video file (mp4 etc); C) Camera source. If you choose a Camera source, you need to use the index number of the camera connected to your computer. A webcam, often is defined as 0. 
+2. **weights**: Change by the *.pt weight file that you want to use
+3. **source**: Change by the image source (for detection) you want to use: a) An image file (jpg, png, etc); B) A video file (mp4 etc); C) Camera source. If you choose a Camera source, you need to use the index number of the camera connected to your computer. A webcam, often is defined as 0. 
 ```
 python3 app.py detect <weights> <source>
 ```
