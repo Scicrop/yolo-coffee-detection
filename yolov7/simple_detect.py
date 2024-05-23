@@ -16,7 +16,7 @@ from utils.torch_utils import select_device, load_classifier, time_synchronized,
 
 
 def detect(source, weights):
-    view_img, save_txt, imgsz, trace = True, False, 640, True
+    view_img, save_txt, imgsz, trace = True, False, 320, True
     webcam = source.isnumeric() or source.endswith('.txt') or source.lower().startswith(
         ('rtsp://', 'rtmp://', 'http://', 'https://'))
 
@@ -87,8 +87,15 @@ def detect(source, weights):
                     for *xyxy, conf, cls in reversed(det):
                         if view_img:  # Add bbox to image
                             label = f'{names[int(cls)]} {conf:.2f}'
-
-                            plot_one_box(xyxy, im0, label=label, color=colors[int(cls)], line_thickness=1)
+                            slabel = f'{names[int(cls)]}'
+                            if slabel == 'defect':
+                                label = f'Coffee: defect level = {conf:.2f}'
+                                plot_one_box(xyxy, im0, label=label, color=colors[int(cls)], line_thickness=1)
+                            elif slabel == 'normal' and conf >= 0.7:
+                                label = f'Coffee'
+                                plot_one_box(xyxy, im0, label=label, color=colors[int(cls)], line_thickness=1)
+                            else:
+                                plot_one_box(xyxy, im0, label=label, color=colors[int(cls)], line_thickness=1)
 
             # Print time (inference + NMS)
             print(f'{s}Done. ({(1E3 * (t2 - t1)):.1f}ms) Inference, ({(1E3 * (t3 - t2)):.1f}ms) NMS')

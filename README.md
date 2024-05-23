@@ -2,6 +2,7 @@
 ## Preparation
 ```
 wget https://public-scicrop.s3.amazonaws.com/academy/CoffeebeanDetection.v1i.yolov7pytorch.zip
+wget https://public-scicrop.s3.amazonaws.com/academy/Coffee-Fruit-Maturity-v5i.yolov7pytorch.zip
 unzip CoffeebeanDetection.v1i.yolov7pytorch.zip
 wget https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7_training.pt
 pip install -r requirements
