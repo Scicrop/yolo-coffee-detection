@@ -28,14 +28,20 @@ rm -rf test/
 rm -rf train/
 ```
 
-## Training: Green Coffee Dataset
+## Training
 ```
 python3 train.py --batch 8 --epochs 55 --data data.yaml --weights 'yolov7_training.pt' --device 0
 ```
 
-## Trained weights
+## Detection with Trained weights
+If you trained the model by yourself using the provided datasets you need to find the files **best.pt** often creted at **yolov7/runs/train** subfolders.
+
 - **Green Coffee:** https://public-scicrop.s3.amazonaws.com/academy/coffee-best.pt
 - **Coffee Fruit:** https://public-scicrop.s3.amazonaws.com/academy/coffee_fruit_best.pt
+
+```
+python3 app.py detect <weights> <source>
+```
 
 ## Results
 
