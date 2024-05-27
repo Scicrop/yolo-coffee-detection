@@ -50,5 +50,8 @@ python3 app.py detect <weights> <source>
 ## Results
 
 https://github.com/Scicrop/yolo-coffee-detection/assets/692043/513ce071-0a32-4556-bce7-0072345e10f9
+https://github.com/Scicrop/yolo-coffee-detection/assets/692043/7c90975b-f0ba-4a20-840e-9f22d6814489
+
+
 
 
